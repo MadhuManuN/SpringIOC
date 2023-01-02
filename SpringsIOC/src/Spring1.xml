@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE beans PUBLIC "-//SPRING//DTD BEAN 2.0//EN" "http://www.springframework.org/dtd/spring-beans-2.0.dtd">
+
+<beans>
+<bean id="project1" class="com.jspiders.pkg1.Person" autowire="byName">
+<property name="name" value="Madhu"></property>
+<property name="id" value="101"></property>
+</bean>
+
+<bean id="project2" class="com.jspiders.pkg1.Person1">
+<constructor-arg value="27" index="1"></constructor-arg>
+<constructor-arg value="Manu" ></constructor-arg>
+<constructor-arg ref="project3"></constructor-arg>
+</bean>
+
+<bean id="project3" class="com.jspiders.pkg1.PersonAddress">
+<constructor-arg value="Mysore"></constructor-arg>
+<constructor-arg value="560072"></constructor-arg>
+</bean>
+
+<bean id="work" class="com.jspiders.pkg1.PersonAddress">
+<constructor-arg value="Bengaluru"></constructor-arg>
+<constructor-arg value="560040"></constructor-arg>
+</bean>
+</beans>
